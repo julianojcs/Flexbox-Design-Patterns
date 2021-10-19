@@ -1,0 +1,105 @@
+.even {
+  min-width: 10rem;
+}
+
+.even-columns {
+  display: flex;
+  gap: 1rem;
+}
+
+.even-columns > * {
+  flex-basis: 100%;
+  /* flex-basis: 33%; */
+}
+
+.ish {
+  min-width: 17.6rem;
+}
+
+.grid-ish {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  min-width: 28rem;
+}
+
+.grid-ish > * {
+  /* flex: 1 1 33%; */ /* 1=tamanho variável dos cards. Deixa crescer (grow) e diminuir (shrink). Tamanho mínimo de 33% do container */
+  flex: 0 0 250px; /* 0=tamanho fixo dos cards. Não deixa crescer nem diminuir */
+}
+
+.content-sidebar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.main {
+  min-width: 28rem;
+}
+
+/* Content */
+.content-sidebar > *:nth-child(1) {
+  flex: 0 0 15rem;
+  /* flex: 1 1 25%;
+  min-width: 15rem; */
+  /*15rem=240px (considerando o tamanho da fonte = 16px */
+}
+
+/* Sidebar */
+.content-sidebar > *:nth-child(2) {
+  flex: 1 1 70%;
+  min-width: 10rem;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
+:root {
+  --ff-primary: basic-sans, sans-serif;
+  --clr-primary: #ee6352;
+  --clr-body: #bbb;
+  --clr-bg: #ddd;
+  --spacer: 1rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+
+.content {
+  margin: var(--spacer) auto var(--spacer);
+  width: 80%;
+  padding: var(--spacer);
+}
+
+.content > div  {
+
+}
+
+.content > div > div {
+  background-color: var(--clr-bg);
+  height: 2rem;
+  border: 1px solid var(--clr-body);
+}
+
+body {
+  background-color: var(--clr-bg);
+  text-align: center;
+}
+
+h1 {
+  color: var(--clr-primary);
+}
+
+.content {
+  background-color: white;
+}
