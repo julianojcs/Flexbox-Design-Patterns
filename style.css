@@ -1,3 +1,76 @@
+:root {
+  --ff-primary: basic-sans, sans-serif;
+  --clr-primary: #ee6352;
+  --clr-body: #bbb;
+  --clr-bg: #ddd;
+  --spacer: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+
+.content {
+  margin: var(--spacer) auto var(--spacer);
+  width: 80%;
+  padding: var(--spacer);
+}
+
+.content>div {}
+
+.content>div>div {
+  background-color: var(--clr-bg);
+  height: 2rem;
+  border: 1px solid var(--clr-body);
+}
+
+body {
+  font-family: var(--ff-primary);
+  min-height: 100vh;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: var(--clr-body);
+  background-color: var(--clr-bg);
+  text-align: center;
+}
+
+a {
+  color: var(--clr-primary);
+}
+
+.content {
+  width: 70vw;
+  margin: 1rem auto;
+  padding: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.col {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-weight: 900;
+  color: var(--clr-primary);
+}
+
+.content>*+* {
+  margin-top: 1rem;
+}
+
 .even {
   min-width: 10rem;
 }
@@ -38,6 +111,14 @@
   min-width: 28rem;
 }
 
+.main>h1 {
+  background-color: var(--clr-bg);
+}
+
+.content-sidebar>* {
+  height: calc(100vh - 8.5rem) !important;
+}
+
 /* Content */
 .content-sidebar > *:nth-child(1) {
   flex: 0 0 15rem;
@@ -56,50 +137,4 @@
   position: fixed;
   bottom: 0.5rem;
   left: 0.5rem;
-}
-
-:root {
-  --ff-primary: basic-sans, sans-serif;
-  --clr-primary: #ee6352;
-  --clr-body: #bbb;
-  --clr-bg: #ddd;
-  --spacer: 1rem;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-h1, h2, h3, p {
-  margin: 0;
-}
-
-
-.content {
-  margin: var(--spacer) auto var(--spacer);
-  width: 80%;
-  padding: var(--spacer);
-}
-
-.content > div  {
-
-}
-
-.content > div > div {
-  background-color: var(--clr-bg);
-  height: 2rem;
-  border: 1px solid var(--clr-body);
-}
-
-body {
-  background-color: var(--clr-bg);
-  text-align: center;
-}
-
-h1 {
-  color: var(--clr-primary);
-}
-
-.content {
-  background-color: white;
 }
